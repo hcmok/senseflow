@@ -147,8 +147,8 @@ path_trace = go.Scatter3d(
     ),
     textposition="top center",
     textfont=dict(size=24, color="white"),
-    name="Path",
 )
+
 expanded_trace = go.Scatter3d(
     mode="markers", marker=dict(color="#eeeeee", size=1.5, opacity=0.7)
 )
@@ -160,9 +160,9 @@ base_fig.update_layout(
     title="3D Semantic Manifold" if False else None,
     template="plotly_dark",
     scene=dict(
-        xaxis=dict(visible=False, showbackground=False, showticklabels=False),
-        yaxis=dict(visible=False, showbackground=False, showticklabels=False),
-        zaxis=dict(visible=False, showbackground=False, showticklabels=False),
+        xaxis=dict(range=[-1, 1], visible=False),
+        yaxis=dict(range=[-1, 1], visible=False),
+        zaxis=dict(range=[-1, 1], visible=False),
         aspectmode="cube",
     ),
     margin=dict(l=0, r=0, b=0, t=(30 if False else 0)),
@@ -170,6 +170,12 @@ base_fig.update_layout(
     height=600,
     showlegend=False,
 )
+# Invisible placeholder to avoid text scaling issues
+base_fig.data[1].x = [0]
+base_fig.data[1].y = [0]
+base_fig.data[1].z = [0]
+base_fig.data[1].text = [" "]
+base_fig.data[1].marker.update(opacity=0)  # type: ignore
 
 
 def generate_output(
@@ -247,12 +253,13 @@ def generate_output(
             fig = base_fig
 
             if dim_point_cloud:
-                fig.data[0].opacity = 0.1
+                fig.data[0].opacity = 0.15
 
             fig.data[1].x = path_3d[:, 0]
             fig.data[1].y = path_3d[:, 1]
             fig.data[1].z = path_3d[:, 2]
             fig.data[1].text = word_path
+            fig.data[1].marker.update(opacity=1)  # type: ignore
 
             fig.data[2].x = visited_3d[:, 0]
             fig.data[2].y = visited_3d[:, 1]
@@ -275,14 +282,7 @@ def generate_output(
             return
 
 
-with gr.Blocks(
-    css="""
-#settings_acc {
-    max-height: 46vh;
-    overflow-y: auto;
-}
-"""
-) as demo:
+with gr.Blocks() as demo:
 
     with gr.Row():
         with gr.Column(scale=2):
@@ -420,4 +420,11 @@ with gr.Blocks(
         show_progress="minimal",
     )
 
-demo.launch()
+demo.launch(
+    css="""
+#settings_acc {
+    max-height: 46vh;
+    overflow-y: auto;
+}
+"""
+)

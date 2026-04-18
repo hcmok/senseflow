@@ -98,16 +98,10 @@ def morph_a_star_generator(
 
         # Accept exact senses of the target word
         if path[-1] == end:
-            centroid_path = (
-                [start_centroid_idx]
-                + [
-                    word_to_centroid_indices[node.split("_")[0]][
-                        int(node.split("_")[1])
-                    ]
-                    for node in path[1:-1]
-                ]
-                + [end_centroid_idx]
-            )
+            centroid_path = [
+                word_to_centroid_indices[node.split("_")[0]][int(node.split("_")[1])]
+                for node in path
+            ]
             result = {
                 "status": 2,
                 "word_sense_path": path,
@@ -221,10 +215,11 @@ def morph_a_star_generator(
             and yield_interval > 0
             and (expansions == 1 or expansions % yield_interval == 0)
         ):
-            centroid_path = [start_centroid_idx] + [
+            centroid_path = [
                 word_to_centroid_indices[node.split("_")[0]][int(node.split("_")[1])]
                 for node in path
             ]
+
             yield {
                 "status": 1,
                 "word_sense_path": path,

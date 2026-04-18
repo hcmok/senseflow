@@ -49,9 +49,9 @@ def render(
         title="3D Semantic Manifold" if show_info else None,
         template="plotly_dark",
         scene=dict(
-            xaxis=dict(visible=False, showbackground=False, showticklabels=False),
-            yaxis=dict(visible=False, showbackground=False, showticklabels=False),
-            zaxis=dict(visible=False, showbackground=False, showticklabels=False),
+            xaxis=dict(range=[-1, 1], visible=False),
+            yaxis=dict(range=[-1, 1], visible=False),
+            zaxis=dict(range=[-1, 1], visible=False),
             aspectmode="cube",
         ),
         margin=dict(l=0, r=0, b=0, t=(30 if show_info else 0)),
