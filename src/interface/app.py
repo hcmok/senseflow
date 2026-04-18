@@ -140,17 +140,17 @@ shell_trace = go.Scatter3d(
 )
 path_trace = go.Scatter3d(
     mode="lines+markers+text",
-    textposition="top center",
-    # Explicitly define the font to prevent auto-scaling
-    textfont=dict(family="Arial, sans-serif", size=12, color="white"),
     marker=dict(
         size=6,
         color="white",
         symbol="circle",
     ),
+    textposition="top center",
+    textfont=dict(size=24, color="white"),
+    name="Path",
 )
 expanded_trace = go.Scatter3d(
-    mode="markers", marker=dict(color="white", size=1.5, opacity=0.7)
+    mode="markers", marker=dict(color="#eeeeee", size=1.5, opacity=0.7)
 )
 base_fig = go.Figure()
 base_fig.add_trace(shell_trace)
@@ -169,7 +169,6 @@ base_fig.update_layout(
     autosize=True,
     height=600,
     showlegend=False,
-    uirevision="constant",
 )
 
 
@@ -241,9 +240,11 @@ def generate_output(
             ]
             raw_display = " → ".join(dyanamic_path)
             visited_3d = coords_3d_sphere[expanded_indices]
-            path_3d = coords_3d_sphere[centroid_path]
 
-            fig = go.Figure(base_fig)  # Copy the layout and shell
+            offset = 1.03
+            path_3d = coords_3d_sphere[centroid_path] * offset
+
+            fig = base_fig
 
             if dim_point_cloud:
                 fig.data[0].opacity = 0.1

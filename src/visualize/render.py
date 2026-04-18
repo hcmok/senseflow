@@ -27,16 +27,19 @@ def render(
         marker=dict(size=1.5, opacity=0.7, color=density, colorscale="Inferno"),
     )
 
-    path_3d_sphere = coords_3d_sphere[centroid_path]
+    offset = 1.03
+    path_3d = coords_3d_sphere[centroid_path] * offset
+
     path_trace = go.Scatter3d(
-        x=path_3d_sphere[:, 0],
-        y=path_3d_sphere[:, 1],
-        z=path_3d_sphere[:, 2],
+        x=path_3d[:, 0],
+        y=path_3d[:, 1],
+        z=path_3d[:, 2],
         mode="lines+markers+text",
         line=dict(color="cyan", width=6),
         marker=dict(size=6, color="white", symbol="circle"),
         text=word_path,
         textposition="top center",
+        textfont=dict(color="white", size=16),
         name="Path",
     )
 

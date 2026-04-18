@@ -9,6 +9,13 @@ $$\text{code} \rightarrow\ \text{character} \rightarrow\ \text{text} \rightarrow
 
 Senseflow is a semantic word morpher that generates meaningful intermediate word sequences between two input words.
 
+<p align="center">
+  <img src="assets/plot.png" width="450"/>
+</p>
+<p align="center">
+  <em>3D semantic manifold visualized with UMAP.</em>
+</p>
+
 See the [report](./REPORT.md) for more details.
 
 ## Installation
