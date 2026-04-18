@@ -31,6 +31,7 @@ To enhance computational efficiency in downstream tasks, the raw BERT embeddings
 Next, we compute word centroids by applying K-Means clustering to the reduced word embeddings. Polysemous words typically produce multiple centroids, each corresponding to a distinct sense. The centroids are again z-score normalized and serve as the final representations of word senses.
 
 In all downstream operations, both word embeddings and centroids are further $L_2$-normalized, such that the word representations lie on the unit hypersphere:
+
 $$S^{d-1} = \{x \in \mathbb{R}^d : \|x\|_2 = 1\}$$
 
 This defines the geometric domain for our Riemannian vector field and enables interpolation and geodesic pathfinding in the embedding space.
@@ -38,13 +39,21 @@ This defines the geometric domain for our Riemannian vector field and enables in
 #### 3.2 Optimal Transport
 
 To construct training targets for the vector field, we compute optimal transport (OT) displacements between semantically related word pairs. We use WordNet (Princeton University, 2010) to identify candidate pairs, including synonyms, antonyms, hypernyms, etc. For each pair, we select the most semantically aligned sense pair by comparing the cosine similarities of their centroids. The corresponding BERT embeddings serve as the source and target distributions in the OT problem. Prior to transport, the embeddings undergo z-score normalization followed by $L_2$ normalization before transport. This respects the geometry of the embedding space as the unit hypersphere $\mathbb{S}^{d-1}$. For any two $L_2$-normalized vectors $x_i$ and $y_j$, the squared Euclidean distance is monotonically related to cosine similarity:
+
 $$C_{ij} = \|x_i - y_j\|^2_2 = \|x_i\|^2 + \|y_j\|^2 - 2(x_i \cdot y_j) = 2 - 2cos(\theta)$$
+
 For each pair of distributions, we solve the entropy-regularized optimal transport problem:
+
 $$P^\ast = \text{argmin}_{P \in U(\mu, \nu)} \sum_{i,j} P_{ij} C_{ij} - \epsilon H(P)$$
+
 The destination is obtained via barycentric projection:
+
 $$\tilde{x}_i = \frac{\sum_{j} P_{ij} y_j}{\left\| \sum_{j} P_{ij} y_j \right\|_2}$$
+
 The raw displacement is then:
+
 $$disp_i = \tilde{x}_i  - x_i$$
+
 Since we operate on the sphere, this straight-line displacement must later be projected onto the tangent space to obtain the correct Riemannian geodesic (see Section 3.3).
 
 #### 3.3 Riemannian Conditional Flow Matching
@@ -52,30 +61,44 @@ Since we operate on the sphere, this straight-line displacement must later be pr
 We employ Riemannian Conditional Flow Matching (RCFM) (Chen & Lipman, 2024) to learn a smooth vector field from the OT displacements.
 
 First, each raw displacement is projected onto the tangent plane at the source point $x$:
+
 $$v_{\text{tangent}} = disp - \langle disp, x \rangle x$$
+
 Then, the Riemannian exponential map on the unit sphere reconstructs the endpoint $y$:
+
 $$y = \exp_x(v_{\text{tangent}}) = \cos(\|v_{\text{tangent}}\|_2) \, x + \sin(\|v_{\text{tangent}}\|_2) \frac{v_{\text{tangent}}}{\|v_{\text{tangent}}\|_2}$$
 
 During training, we sample $t \sim \mathcal{U}[0,1]$ and obtain an intermediate point $z_t$ along the geodesic by spherical linear interpolation (SLERP):
-$$z_t = \gamma(t) = \operatorname{slerp}(x,y;t) = \frac{sin((1-t)\theta)}{sin\theta}x + \frac{sin(t\theta)}{sin\theta}y$$
-where $$\theta = \text{arccos}(\langle x, y \rangle)$$
+
+$$z_t = \gamma(t) = \text{slerp}(x,y;t) = \frac{sin((1-t)\theta)}{sin\theta}x + \frac{sin(t\theta)}{sin\theta}y$$
+
+where
+
+$$\theta = \text{arccos}(\langle x, y \rangle)$$
 
 The target velocity at time $t$ is the time derivative of the geodesic:
+
 $$v_{\text{target}}(t) = \dot{\gamma}(t) = \frac{-\theta \cos((1-t)\theta)}{\sin \theta} x + \frac{\theta \cos(t\theta)}{\sin \theta} y$$
 
 Instead of conditioning on the exact OT destination $y$, we condition the model on the word centroid $g$. This provides a more stable target that guides the flow toward meaningful regions of the manifold.
 
 The loss function is:
+
 $$\mathcal{L}(\theta) = \mathbb{E}_{t \sim \mathcal{U}[0,1], (x,y,g) \sim q} \left[ \lambda_{\text{mse}} \| v_\theta(z_t, g, t) - v_{target}(t) \|_g^2 + \lambda_{\text{ortho}} \langle v_\theta(z_t, g, t), z_t \rangle^2 \right]$$
+
 where $||\cdot||_g^2$ is the squared norm induced by the Riemannian metric, which reduces to the standard Euclidean $L_2$ norm on the tangent space of the hypersphere.
 The orthogonality term encourages the predicted velocity to remain on the tangent plane at $z_t$.
 
 #### 3.4 Pathfinding with Flow Guidance
 
 When morphing between two words, we first resolve polysemy by selecting the pair of senses (centroids) with the smallest Euclidean distance. We then employ an A\* search algorithm over the set of all word-sense centroids to find a path. The learned Riemannian vector field guides the search. To accelerate neighbor discovery, a k-d tree over centroids is precomputed. The A\* cost function minimizes:
+
 $$f(n) = g(n) + h(n)$$
+
 where
+
 $$g(n) = g_{\text{parent}} + \lambda_{\text{step}} \|z_{n}-z_{\text{parent}}\|_2 + \lambda_{\text{lemma}} l_c(n) + \underbrace{\lambda_{\text{flow}}\left(1- \left\langle \frac{z_{n}-z_{\text{parent}}}{\|z_{n}-z_{\text{parent}}\|_2}, \frac{v_{\text{pred}}}{\|v_{\text{pred}}\|_2} \right\rangle\right)}_{\text{alignment}}$$
+
 $$h(n) = \lambda_{\text{step}}\|z_{n}-z_{\text{goal}}\|_2(1+\text{alignment})$$
 
 - $z_n$: The centroid of the word sense $n$.
@@ -173,18 +196,18 @@ They are generated using the default configuration, except that the results are 
 
 ### 7. References
 
-Chen, R. T. Q., & Lipman, Y. (2024). Flow matching on general geometries. In *The Twelfth International Conference on Learning Representations*. https://openreview.net/forum?id=g7ohDlTITL
+Chen, R. T. Q., & Lipman, Y. (2024). Flow matching on general geometries. In _The Twelfth International Conference on Learning Representations_. https://openreview.net/forum?id=g7ohDlTITL
 
-Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of deep bidirectional transformers for language understanding. In *Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)* (pp. 4171-4186). Association for Computational Linguistics. https://doi.org/10.18653/v1/N19-1423
+Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2019). BERT: Pre-training of deep bidirectional transformers for language understanding. In _Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)_ (pp. 4171-4186). Association for Computational Linguistics. https://doi.org/10.18653/v1/N19-1423
 
-Hill, F., Reichart, R., & Korhonen, A. (2015). SimLex-999: Evaluating semantic models with (genuine) similarity estimation. *Computational Linguistics*, 41(4), 665–695. https://doi.org/10.1162/coli_a_00237
+Hill, F., Reichart, R., & Korhonen, A. (2015). SimLex-999: Evaluating semantic models with (genuine) similarity estimation. _Computational Linguistics_, 41(4), 665–695. https://doi.org/10.1162/coli_a_00237
 
-Huang, S., Wu, Y., Wei, F., & Zhou, M. (2018). Text morphing [Preprint]. *arXiv*. https://arxiv.org/abs/1810.00341
+Huang, S., Wu, Y., Wei, F., & Zhou, M. (2018). Text morphing [Preprint]. _arXiv_. https://arxiv.org/abs/1810.00341
 
-Mikolov, T., Chen, K., Corrado, G.S., & Dean, J. (2013). Efficient estimation of word representations in vector space. *International Conference on Learning Representations*. https://arxiv.org/abs/1301.3781
+Mikolov, T., Chen, K., Corrado, G.S., & Dean, J. (2013). Efficient estimation of word representations in vector space. _International Conference on Learning Representations_. https://arxiv.org/abs/1301.3781
 
-Pennington, J., Socher, R., & Manning, C. D. (2014, October). GloVe: Global vectors for word representation. In *Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)* (pp. 1532-1543). Association for Computational Linguistics. https://doi.org/10.3115/v1/D14-1162
+Pennington, J., Socher, R., & Manning, C. D. (2014, October). GloVe: Global vectors for word representation. In _Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP)_ (pp. 1532-1543). Association for Computational Linguistics. https://doi.org/10.3115/v1/D14-1162
 
-Princeton University. (2010). *About WordNet*. WordNet. https://wordnet.princeton.edu
+Princeton University. (2010). _About WordNet_. WordNet. https://wordnet.princeton.edu
 
-Zeldes, Y. (2018, April 28). *Word morphing*. *Towards Data Science*. https://towardsdatascience.com/word-morphing-9f87ee577775
+Zeldes, Y. (2018, April 28). _Word morphing_. _Towards Data Science_. https://towardsdatascience.com/word-morphing-9f87ee577775
