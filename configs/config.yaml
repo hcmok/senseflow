@@ -1,0 +1,91 @@
+data:
+  dir: data
+  samples_path: samples.jsonl
+  pairs_path: pairs.csv
+  pairs_metadata_path: pair_metadata.json
+  raw_embeddings_path: raw_embeddings.bin
+  embeddings_path: embeddings.bin
+  embedding_metadata_path: embedding_metadata.json
+  centroids_path: centroids.bin
+  centroid_metadata_path: centroid_metadata.json
+  displacements_path: displacements.bin
+  displacement_indices_path: displacement_indices.npy
+  displacement_metadata_path: displacement_metadata.json
+  semantic_manifold_path: semantic_manifold.npz
+
+encoder:
+  tokenizer_name: bert-base-uncased
+  model_name: bert-base-uncased
+  max_seq_length: 512
+
+preprocess:
+  batch_size: 128
+
+  corpus:
+    path: allenai/c4
+    name: en
+    split: train
+    streaming: true
+    process_sentence_count: 50000000
+
+  vocab:
+    min_word_freq: 300
+    max_sample_count_per_word: 100
+
+  embeddings:
+    original_dim: 768
+    pca_n_components: 100
+
+  ot:
+    reg: 0.05
+    max_iter: 1500
+    stop_threshold: 1e-6
+
+  centroids:
+    min_size: 5
+    max_clusters: 5
+    max_similarity: 0.6
+
+model:
+  input_dim: 201
+  output_dim: 100
+  hidden_dim: 256
+  num_layers: 4
+  dropout: 0.1
+
+training:
+  test_size: 0.2
+  batch_size: 512
+  lr: 5e-4
+  num_epochs: 3
+
+  loss_weights:
+    mse: 1.0
+    ortho: 0.1
+
+checkpoints:
+  dir: checkpoints
+  checkpoint_for_inference_path: model_epoch_2.pth
+
+logs:
+  dir: logs
+  train_log_path: train_log.csv
+
+pathfind:
+  kdtree:
+    k_neighbors: 30
+    max_neighbor_distance: 1.1
+    k_cutoff: 15
+    temperature: 0.1
+  astar:
+    max_expansions: 3000
+    weights: [1.0, 1.5, 2.0]
+    allow_immediate_reach: false
+
+visualize:
+  umap:
+    n_neighbors: 25
+    min_dist: 0.2
+
+hf:
+  repo_id: oako/senseflow  

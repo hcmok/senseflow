@@ -1,0 +1,40 @@
+data:
+  dir: data
+  centroids_path: centroids.bin
+  centroid_metadata_path: centroid_metadata.json
+
+checkpoints:
+  dir: checkpoints
+  checkpoint_for_inference_path: model_epoch_2.pth
+
+model:
+  input_dim: 201
+  output_dim: 100
+  hidden_dim: 256
+  num_layers: 4
+  dropout: 0.1
+
+experiment:
+  word_pairs_path: data/SimLex-999.txt
+  num_word_pairs: 150
+
+  comparisons:
+    a_star_flow:
+      weights: [1.0, 0.0, 1.0]
+    a_star_vanilla:
+      weights: [1.0, 0.0, 0.0]  
+    geometric_interpolation:
+      n_steps: 500
+
+pathfind:
+  kdtree:
+    k_neighbors: 30
+    max_neighbor_distance: 1.1
+    k_cutoff: None
+    temperature: 0
+  astar:
+    max_expansions: 3000
+    allow_immediate_reach: true
+
+results:
+  dir: results    

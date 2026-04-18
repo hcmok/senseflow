@@ -1,0 +1,150 @@
+{"word_start": "accept", "word_end": "deny", "simlex_score": 1.75, "word_path": ["accept", "deny"], "expansion_count": 1, "cosine_similarity": [0.371141]}
+{"word_start": "motor", "word_end": "boat", "simlex_score": 2.57, "word_path": ["motor", "vehicles", "carriages", "boats", "boat"], "expansion_count": 10, "cosine_similarity": [0.515282, 0.570993, 0.432889, 0.891527]}
+{"word_start": "alley", "word_end": "bowl", "simlex_score": 1.53, "word_path": ["alley", "corner", "rectangular", "conical", "bowl"], "expansion_count": 216, "cosine_similarity": [0.436528, 0.528889, 0.364402, 0.137732]}
+{"word_start": "fresh", "word_end": "wide", "simlex_score": 0.4, "word_path": ["fresh", "new", "bigger", "wider", "wide"], "expansion_count": 62, "cosine_similarity": [0.535886, 0.366936, 0.631591, 0.888686]}
+{"word_start": "man", "word_end": "victor", "simlex_score": 1.9, "word_path": ["man", "he", "max", "victor"], "expansion_count": 27, "cosine_similarity": [0.598905, 0.292708, 0.297215]}
+{"word_start": "pollution", "word_end": "president", "simlex_score": 0.68, "word_path": ["pollution", "epa", "federally", "federal", "administration", "president"], "expansion_count": 362, "cosine_similarity": [0.540829, 0.350885, 0.74909, 0.456634, 0.598325]}
+{"word_start": "box", "word_end": "cigar", "simlex_score": 1.25, "word_path": ["box", "envelope", "card", "cards", "cigarettes", "cigar"], "expansion_count": 683, "cosine_similarity": [0.459088, 0.376563, 0.900497, 0.398184, 0.702115]}
+{"word_start": "destroy", "word_end": "make", "simlex_score": 1.6, "word_path": ["destroy", "break", "make"], "expansion_count": 2, "cosine_similarity": [0.437858, 0.332312]}
+{"word_start": "join", "word_end": "acquire", "simlex_score": 2.85, "word_path": ["join", "recruit", "acquire"], "expansion_count": 2, "cosine_similarity": [0.599974, 0.390688]}
+{"word_start": "different", "word_end": "normal", "simlex_score": 1.08, "word_path": ["different", "particular", "certain", "typical", "normal"], "expansion_count": 37, "cosine_similarity": [0.367907, 0.593902, 0.471182, 0.608617]}
+{"word_start": "god", "word_end": "prey", "simlex_score": 1.23, "word_path": ["god", "satan", "devil", "beast", "predator", "prey"], "expansion_count": 156, "cosine_similarity": [0.553021, 0.795869, 0.523836, 0.512253, 0.761247]}
+{"word_start": "task", "word_end": "woman", "simlex_score": 0.68, "word_path": ["task", "job", "clerical", "nun", "woman"], "expansion_count": 304, "cosine_similarity": [0.579378, 0.455737, 0.284449, 0.412417]}
+{"word_start": "princess", "word_end": "island", "simlex_score": 0.3, "word_path": ["princess", "mermaid", "eel", "island"], "expansion_count": 19, "cosine_similarity": [0.51479, 0.411179, 0.285906]}
+{"word_start": "car", "word_end": "bridge", "simlex_score": 0.95, "word_path": ["car", "driver", "passenger", "traffic", "pedestrian", "bridge"], "expansion_count": 326, "cosine_similarity": [0.58663, 0.533518, 0.411926, 0.407412, 0.298084]}
+{"word_start": "apple", "word_end": "candy", "simlex_score": 2.08, "word_path": ["apple", "bean", "peanut", "candy"], "expansion_count": 24, "cosine_similarity": [0.344002, 0.491387, 0.449026]}
+{"word_start": "nurse", "word_end": "scientist", "simlex_score": 2.08, "word_path": ["nurse", "therapist", "psychologists", "scientists", "scientist"], "expansion_count": 42, "cosine_similarity": [0.464558, 0.636119, 0.453455, 0.903673]}
+{"word_start": "destruction", "word_end": "construction", "simlex_score": 0.98, "word_path": ["destruction", "demolition", "construction"], "expansion_count": 2, "cosine_similarity": [0.6187, 0.498612]}
+{"word_start": "give", "word_end": "steal", "simlex_score": 0.5, "word_path": ["give", "take", "seize", "steal"], "expansion_count": 21, "cosine_similarity": [0.597653, 0.412917, 0.501199]}
+{"word_start": "bath", "word_end": "balloon", "simlex_score": 0.4, "word_path": ["bath", "wash", "spray", "hose", "balloon"], "expansion_count": 70, "cosine_similarity": [0.488767, 0.509603, 0.526496, 0.417557]}
+{"word_start": "happy", "word_end": "angry", "simlex_score": 1.28, "word_path": ["happy", "unhappy", "angry"], "expansion_count": 2, "cosine_similarity": [0.561922, 0.615871]}
+{"word_start": "spend", "word_end": "save", "simlex_score": 0.55, "word_path": ["spend", "save"], "expansion_count": 1, "cosine_similarity": [0.433277]}
+{"word_start": "child", "word_end": "adult", "simlex_score": 2.98, "word_path": ["child", "infant", "adult"], "expansion_count": 2, "cosine_similarity": [0.661139, 0.371091]}
+{"word_start": "danger", "word_end": "disease", "simlex_score": 3.0, "word_path": ["danger", "hazards", "illnesses", "disease"], "expansion_count": 9, "cosine_similarity": [0.68775, 0.44041, 0.763311]}
+{"word_start": "bread", "word_end": "cheese", "simlex_score": 1.95, "word_path": ["bread", "cheese"], "expansion_count": 1, "cosine_similarity": [0.537641]}
+{"word_start": "college", "word_end": "profession", "simlex_score": 3.12, "word_path": ["college", "degree", "specialization", "profession"], "expansion_count": 21, "cosine_similarity": [0.556485, 0.400064, 0.566032]}
+{"word_start": "foot", "word_end": "head", "simlex_score": 2.3, "word_path": ["foot", "limb", "limbs", "necks", "heads", "head"], "expansion_count": 101, "cosine_similarity": [0.604614, 0.826695, 0.376575, 0.526736, 0.878015]}
+{"word_start": "fun", "word_end": "football", "simlex_score": 1.97, "word_path": ["fun", "leisure", "sports", "football"], "expansion_count": 11, "cosine_similarity": [0.362513, 0.52244, 0.79403]}
+{"word_start": "winner", "word_end": "goal", "simlex_score": 3.23, "word_path": ["winner", "victorious", "successes", "goals", "goal"], "expansion_count": 102, "cosine_similarity": [0.50433, 0.426512, 0.400699, 0.885479]}
+{"word_start": "argument", "word_end": "agreement", "simlex_score": 1.45, "word_path": ["argument", "conclusion", "consensus", "agreed", "agreement"], "expansion_count": 60, "cosine_similarity": [0.496336, 0.497003, 0.35945, 0.3277]}
+{"word_start": "forget", "word_end": "retain", "simlex_score": 0.63, "word_path": ["forget", "lose", "retain"], "expansion_count": 2, "cosine_similarity": [0.359645, 0.386716]}
+{"word_start": "car", "word_end": "elevator", "simlex_score": 1.03, "word_path": ["car", "vehicle", "van", "bus", "subway", "elevator"], "expansion_count": 332, "cosine_similarity": [0.870427, 0.484074, 0.422459, 0.433952, 0.501347]}
+{"word_start": "sly", "word_end": "tough", "simlex_score": 0.58, "word_path": ["sly", "sinister", "terrifying", "scary", "tough"], "expansion_count": 113, "cosine_similarity": [0.504639, 0.444368, 0.84041, 0.459037]}
+{"word_start": "river", "word_end": "valley", "simlex_score": 1.67, "word_path": ["river", "gorge", "valley"], "expansion_count": 2, "cosine_similarity": [0.527064, 0.534599]}
+{"word_start": "try", "word_end": "think", "simlex_score": 2.62, "word_path": ["try", "think"], "expansion_count": 1, "cosine_similarity": [0.391342]}
+{"word_start": "house", "word_end": "key", "simlex_score": 1.9, "word_path": ["house", "majority", "unanimous", "decisive", "key"], "expansion_count": 78, "cosine_similarity": [0.276257, 0.53302, 0.534415, 0.299653]}
+{"word_start": "hard", "word_end": "simple", "simlex_score": 1.38, "word_path": ["hard", "simple"], "expansion_count": 1, "cosine_similarity": [0.517143]}
+{"word_start": "please", "word_end": "plead", "simlex_score": 2.98, "word_path": ["please", "hesitate", "beg", "plead"], "expansion_count": 20, "cosine_similarity": [0.244446, 0.431585, 0.441389]}
+{"word_start": "organize", "word_end": "become", "simlex_score": 1.77, "word_path": ["organize", "form", "become"], "expansion_count": 2, "cosine_similarity": [0.260746, 0.339396]}
+{"word_start": "lemon", "word_end": "tea", "simlex_score": 1.6, "word_path": ["lemon", "mint", "tea"], "expansion_count": 2, "cosine_similarity": [0.348418, 0.330737]}
+{"word_start": "loop", "word_end": "belt", "simlex_score": 3.1, "word_path": ["loop", "spur", "belt"], "expansion_count": 3, "cosine_similarity": [0.303171, 0.3655]}
+{"word_start": "bride", "word_end": "princess", "simlex_score": 2.8, "word_path": ["bride", "duchess", "princess"], "expansion_count": 2, "cosine_similarity": [0.431706, 0.556943]}
+{"word_start": "wide", "word_end": "narrow", "simlex_score": 1.03, "word_path": ["wide", "narrow"], "expansion_count": 1, "cosine_similarity": [0.823472]}
+{"word_start": "door", "word_end": "kitchen", "simlex_score": 1.67, "word_path": ["door", "cabinet", "kitchen"], "expansion_count": 2, "cosine_similarity": [0.429687, 0.576867]}
+{"word_start": "task", "word_end": "straw", "simlex_score": 0.68, "word_path": ["task", "accomplishment", "milestone", "tipping", "straw"], "expansion_count": 127, "cosine_similarity": [0.493375, 0.53921, 0.200292, 0.304941]}
+{"word_start": "wife", "word_end": "husband", "simlex_score": 2.3, "word_path": ["wife", "husband"], "expansion_count": 1, "cosine_similarity": [0.868859]}
+{"word_start": "lose", "word_end": "get", "simlex_score": 0.77, "word_path": ["lose", "gain", "get"], "expansion_count": 2, "cosine_similarity": [0.407209, 0.526719]}
+{"word_start": "send", "word_end": "receive", "simlex_score": 1.08, "word_path": ["send", "receive"], "expansion_count": 1, "cosine_similarity": [0.672944]}
+{"word_start": "get", "word_end": "put", "simlex_score": 1.98, "word_path": ["get", "give", "put"], "expansion_count": 2, "cosine_similarity": [0.620744, 0.584083]}
+{"word_start": "door", "word_end": "cellar", "simlex_score": 1.97, "word_path": ["door", "floor", "basement", "cellar"], "expansion_count": 22, "cosine_similarity": [0.459356, 0.590897, 0.635345]}
+{"word_start": "modest", "word_end": "ashamed", "simlex_score": 2.65, "word_path": ["modest", "humble", "pity", "shame", "ashamed"], "expansion_count": 47, "cosine_similarity": [0.50943, 0.273887, 0.71277, 0.566156]}
+{"word_start": "nail", "word_end": "hand", "simlex_score": 3.42, "word_path": ["nail", "finger", "hand"], "expansion_count": 2, "cosine_similarity": [0.609434, 0.731533]}
+{"word_start": "daughter", "word_end": "kid", "simlex_score": 4.17, "word_path": ["daughter", "kid"], "expansion_count": 1, "cosine_similarity": [0.538747]}
+{"word_start": "kidney", "word_end": "organ", "simlex_score": 6.17, "word_path": ["kidney", "organ"], "expansion_count": 1, "cosine_similarity": [0.660082]}
+{"word_start": "strength", "word_end": "capability", "simlex_score": 5.28, "word_path": ["strength", "prowess", "capability"], "expansion_count": 2, "cosine_similarity": [0.590451, 0.562896]}
+{"word_start": "arm", "word_end": "muscle", "simlex_score": 3.72, "word_path": ["arm", "limb", "muscle"], "expansion_count": 2, "cosine_similarity": [0.647731, 0.548584]}
+{"word_start": "bird", "word_end": "turkey", "simlex_score": 6.58, "word_path": ["bird", "poultry", "turkey"], "expansion_count": 2, "cosine_similarity": [0.657655, 0.560323]}
+{"word_start": "understand", "word_end": "listen", "simlex_score": 4.68, "word_path": ["understand", "converse", "listen"], "expansion_count": 3, "cosine_similarity": [0.281603, 0.282394]}
+{"word_start": "organ", "word_end": "liver", "simlex_score": 6.15, "word_path": ["organ", "liver"], "expansion_count": 1, "cosine_similarity": [0.666363]}
+{"word_start": "give", "word_end": "allow", "simlex_score": 5.15, "word_path": ["give", "allow"], "expansion_count": 1, "cosine_similarity": [0.429448]}
+{"word_start": "opinion", "word_end": "idea", "simlex_score": 5.7, "word_path": ["opinion", "recommendation", "suggestion", "idea"], "expansion_count": 15, "cosine_similarity": [0.383681, 0.634596, 0.6919]}
+{"word_start": "nose", "word_end": "mouth", "simlex_score": 3.73, "word_path": ["nose", "mouth"], "expansion_count": 1, "cosine_similarity": [0.604054]}
+{"word_start": "carry", "word_end": "bring", "simlex_score": 5.8, "word_path": ["carry", "bring"], "expansion_count": 1, "cosine_similarity": [0.473334]}
+{"word_start": "hand", "word_end": "thumb", "simlex_score": 3.88, "word_path": ["hand", "thumb"], "expansion_count": 1, "cosine_similarity": [0.680144]}
+{"word_start": "beer", "word_end": "beverage", "simlex_score": 5.42, "word_path": ["beer", "beverage"], "expansion_count": 1, "cosine_similarity": [0.737984]}
+{"word_start": "absorb", "word_end": "learn", "simlex_score": 5.48, "word_path": ["absorb", "penetrate", "discover", "learn"], "expansion_count": 9, "cosine_similarity": [0.476067, 0.291105, 0.380709]}
+{"word_start": "add", "word_end": "build", "simlex_score": 4.92, "word_path": ["add", "build"], "expansion_count": 1, "cosine_similarity": [0.296685]}
+{"word_start": "gossip", "word_end": "news", "simlex_score": 5.22, "word_path": ["gossip", "news"], "expansion_count": 1, "cosine_similarity": [0.499881]}
+{"word_start": "beach", "word_end": "island", "simlex_score": 5.6, "word_path": ["beach", "coast", "atlantic", "island"], "expansion_count": 25, "cosine_similarity": [0.69786, 0.620491, 0.532023]}
+{"word_start": "kill", "word_end": "hang", "simlex_score": 4.45, "word_path": ["kill", "stalk", "catch", "hang"], "expansion_count": 16, "cosine_similarity": [0.368921, 0.340555, 0.408956]}
+{"word_start": "air", "word_end": "helium", "simlex_score": 3.63, "word_path": ["air", "gas", "helium"], "expansion_count": 2, "cosine_similarity": [0.642159, 0.601724]}
+{"word_start": "laden", "word_end": "heavy", "simlex_score": 5.9, "word_path": ["laden", "bulky", "heavy"], "expansion_count": 2, "cosine_similarity": [0.285244, 0.610728]}
+{"word_start": "basketball", "word_end": "baseball", "simlex_score": 4.92, "word_path": ["basketball", "baseball"], "expansion_count": 1, "cosine_similarity": [0.695267]}
+{"word_start": "sugar", "word_end": "honey", "simlex_score": 5.13, "word_path": ["sugar", "cinnamon", "honey"], "expansion_count": 2, "cosine_similarity": [0.444024, 0.377525]}
+{"word_start": "nice", "word_end": "generous", "simlex_score": 5.0, "word_path": ["nice", "fancy", "extravagant", "generous"], "expansion_count": 18, "cosine_similarity": [0.351375, 0.507237, 0.43112]}
+{"word_start": "tin", "word_end": "aluminum", "simlex_score": 6.42, "word_path": ["tin", "aluminium", "aluminum"], "expansion_count": 2, "cosine_similarity": [0.378001, 0.960196]}
+{"word_start": "pretend", "word_end": "seem", "simlex_score": 4.68, "word_path": ["pretend", "say", "seem"], "expansion_count": 2, "cosine_similarity": [0.37736, 0.384005]}
+{"word_start": "tree", "word_end": "maple", "simlex_score": 5.53, "word_path": ["tree", "birch", "maple"], "expansion_count": 2, "cosine_similarity": [0.586704, 0.474638]}
+{"word_start": "want", "word_end": "choose", "simlex_score": 4.78, "word_path": ["want", "prefer", "choose"], "expansion_count": 2, "cosine_similarity": [0.525381, 0.544778]}
+{"word_start": "bad", "word_end": "guilty", "simlex_score": 4.2, "word_path": ["bad", "worse", "guilty"], "expansion_count": 2, "cosine_similarity": [0.624704, 0.406521]}
+{"word_start": "weekend", "word_end": "week", "simlex_score": 4.0, "word_path": ["weekend", "week"], "expansion_count": 1, "cosine_similarity": [0.608214]}
+{"word_start": "guy", "word_end": "partner", "simlex_score": 3.57, "word_path": ["guy", "friend", "partner"], "expansion_count": 2, "cosine_similarity": [0.523553, 0.345341]}
+{"word_start": "bone", "word_end": "ankle", "simlex_score": 3.82, "word_path": ["bone", "limb", "ankle"], "expansion_count": 2, "cosine_similarity": [0.547487, 0.60082]}
+{"word_start": "violin", "word_end": "instrument", "simlex_score": 6.58, "word_path": ["violin", "octave", "instrument"], "expansion_count": 2, "cosine_similarity": [0.381871, 0.45974]}
+{"word_start": "telephone", "word_end": "booth", "simlex_score": 3.63, "word_path": ["telephone", "caller", "receptionist", "attendant", "booth"], "expansion_count": 118, "cosine_similarity": [0.767074, 0.437322, 0.581794, 0.309984]}
+{"word_start": "cereal", "word_end": "wheat", "simlex_score": 3.75, "word_path": ["cereal", "wheat"], "expansion_count": 1, "cosine_similarity": [0.70482]}
+{"word_start": "friend", "word_end": "guest", "simlex_score": 4.25, "word_path": ["friend", "roommate", "boarding", "guest"], "expansion_count": 18, "cosine_similarity": [0.258278, 0.235719, 0.327832]}
+{"word_start": "book", "word_end": "bible", "simlex_score": 5.0, "word_path": ["book", "chapters", "verses", "testament", "bible"], "expansion_count": 24, "cosine_similarity": [0.60439, 0.336999, 0.618606, 0.71755]}
+{"word_start": "cooperate", "word_end": "join", "simlex_score": 5.18, "word_path": ["cooperate", "participate", "join"], "expansion_count": 2, "cosine_similarity": [0.572139, 0.617377]}
+{"word_start": "breakfast", "word_end": "bacon", "simlex_score": 4.37, "word_path": ["breakfast", "bacon"], "expansion_count": 1, "cosine_similarity": [0.456918]}
+{"word_start": "brother", "word_end": "son", "simlex_score": 3.48, "word_path": ["brother", "son"], "expansion_count": 1, "cosine_similarity": [0.589438]}
+{"word_start": "argument", "word_end": "criticism", "simlex_score": 5.08, "word_path": ["argument", "accusation", "criticism"], "expansion_count": 7, "cosine_similarity": [0.482797, 0.500534]}
+{"word_start": "word", "word_end": "dictionary", "simlex_score": 3.68, "word_path": ["word", "vocabulary", "dictionary"], "expansion_count": 2, "cosine_similarity": [0.691363, 0.749002]}
+{"word_start": "date", "word_end": "calendar", "simlex_score": 4.42, "word_path": ["date", "calendar"], "expansion_count": 1, "cosine_similarity": [0.515716]}
+{"word_start": "size", "word_end": "magnitude", "simlex_score": 6.33, "word_path": ["size", "amount", "magnitude"], "expansion_count": 3, "cosine_similarity": [0.419745, 0.382815]}
+{"word_start": "complain", "word_end": "argue", "simlex_score": 4.8, "word_path": ["complain", "argue"], "expansion_count": 1, "cosine_similarity": [0.476619]}
+{"word_start": "bone", "word_end": "jaw", "simlex_score": 4.17, "word_path": ["bone", "jaw"], "expansion_count": 1, "cosine_similarity": [0.540418]}
+{"word_start": "toe", "word_end": "finger", "simlex_score": 4.68, "word_path": ["toe", "foot", "finger"], "expansion_count": 2, "cosine_similarity": [0.780158, 0.544554]}
+{"word_start": "bread", "word_end": "flour", "simlex_score": 3.33, "word_path": ["bread", "flour"], "expansion_count": 1, "cosine_similarity": [0.605395]}
+{"word_start": "book", "word_end": "article", "simlex_score": 5.43, "word_path": ["book", "publication", "article"], "expansion_count": 2, "cosine_similarity": [0.500757, 0.538423]}
+{"word_start": "death", "word_end": "tragedy", "simlex_score": 5.8, "word_path": ["death", "tragedy"], "expansion_count": 1, "cosine_similarity": [0.586022]}
+{"word_start": "bizarre", "word_end": "strange", "simlex_score": 9.37, "word_path": ["bizarre", "strange"], "expansion_count": 1, "cosine_similarity": [0.804959]}
+{"word_start": "weird", "word_end": "strange", "simlex_score": 8.93, "word_path": ["weird", "strange"], "expansion_count": 1, "cosine_similarity": [0.886959]}
+{"word_start": "bottle", "word_end": "container", "simlex_score": 7.93, "word_path": ["bottle", "container"], "expansion_count": 1, "cosine_similarity": [0.489639]}
+{"word_start": "area", "word_end": "zone", "simlex_score": 8.33, "word_path": ["area", "zone"], "expansion_count": 1, "cosine_similarity": [0.574024]}
+{"word_start": "task", "word_end": "job", "simlex_score": 8.87, "word_path": ["task", "job"], "expansion_count": 1, "cosine_similarity": [0.579378]}
+{"word_start": "author", "word_end": "creator", "simlex_score": 8.02, "word_path": ["author", "creator"], "expansion_count": 1, "cosine_similarity": [0.624992]}
+{"word_start": "ignore", "word_end": "avoid", "simlex_score": 6.87, "word_path": ["ignore", "avoid"], "expansion_count": 1, "cosine_similarity": [0.678862]}
+{"word_start": "wire", "word_end": "cord", "simlex_score": 7.62, "word_path": ["wire", "cord"], "expansion_count": 1, "cosine_similarity": [0.687142]}
+{"word_start": "insane", "word_end": "crazy", "simlex_score": 9.57, "word_path": ["insane", "crazy"], "expansion_count": 1, "cosine_similarity": [0.831572]}
+{"word_start": "clarify", "word_end": "explain", "simlex_score": 8.33, "word_path": ["clarify", "explain"], "expansion_count": 1, "cosine_similarity": [0.660073]}
+{"word_start": "inspect", "word_end": "examine", "simlex_score": 8.75, "word_path": ["inspect", "examine"], "expansion_count": 1, "cosine_similarity": [0.789947]}
+{"word_start": "make", "word_end": "earn", "simlex_score": 7.62, "word_path": ["make", "gain", "earn"], "expansion_count": 2, "cosine_similarity": [0.406264, 0.524496]}
+{"word_start": "discuss", "word_end": "explain", "simlex_score": 6.67, "word_path": ["discuss", "explain"], "expansion_count": 1, "cosine_similarity": [0.54427]}
+{"word_start": "aisle", "word_end": "hallway", "simlex_score": 6.75, "word_path": ["aisle", "corridor", "hallway"], "expansion_count": 2, "cosine_similarity": [0.378612, 0.82368]}
+{"word_start": "way", "word_end": "manner", "simlex_score": 7.62, "word_path": ["way", "manner"], "expansion_count": 1, "cosine_similarity": [0.323282]}
+{"word_start": "win", "word_end": "accomplish", "simlex_score": 7.85, "word_path": ["win", "earn", "achieve", "accomplish"], "expansion_count": 4, "cosine_similarity": [0.39071, 0.409295, 0.820045]}
+{"word_start": "compare", "word_end": "analyze", "simlex_score": 8.1, "word_path": ["compare", "analyze"], "expansion_count": 1, "cosine_similarity": [0.324088]}
+{"word_start": "wonderful", "word_end": "terrific", "simlex_score": 8.63, "word_path": ["wonderful", "terrific"], "expansion_count": 1, "cosine_similarity": [0.672234]}
+{"word_start": "agony", "word_end": "grief", "simlex_score": 7.63, "word_path": ["agony", "grief"], "expansion_count": 1, "cosine_similarity": [0.385846]}
+{"word_start": "large", "word_end": "big", "simlex_score": 9.55, "word_path": ["large", "big"], "expansion_count": 1, "cosine_similarity": [0.806507]}
+{"word_start": "battle", "word_end": "conquest", "simlex_score": 7.22, "word_path": ["battle", "wars", "conquest"], "expansion_count": 3, "cosine_similarity": [0.716616, 0.544848]}
+{"word_start": "inexpensive", "word_end": "cheap", "simlex_score": 8.72, "word_path": ["inexpensive", "cheap"], "expansion_count": 1, "cosine_similarity": [0.862761]}
+{"word_start": "heroine", "word_end": "hero", "simlex_score": 8.78, "word_path": ["heroine", "hero"], "expansion_count": 1, "cosine_similarity": [0.411563]}
+{"word_start": "cop", "word_end": "sheriff", "simlex_score": 9.05, "word_path": ["cop", "sheriff"], "expansion_count": 1, "cosine_similarity": [0.607313]}
+{"word_start": "create", "word_end": "build", "simlex_score": 8.48, "word_path": ["create", "build"], "expansion_count": 1, "cosine_similarity": [0.552718]}
+{"word_start": "reflection", "word_end": "image", "simlex_score": 7.27, "word_path": ["reflection", "depiction", "imagery", "image"], "expansion_count": 10, "cosine_similarity": [0.420298, 0.613845, 0.662845]}
+{"word_start": "take", "word_end": "obtain", "simlex_score": 7.1, "word_path": ["take", "seize", "obtain"], "expansion_count": 2, "cosine_similarity": [0.412917, 0.435796]}
+{"word_start": "large", "word_end": "huge", "simlex_score": 9.47, "word_path": ["large", "huge"], "expansion_count": 1, "cosine_similarity": [0.810198]}
+{"word_start": "crucial", "word_end": "important", "simlex_score": 8.82, "word_path": ["crucial", "important"], "expansion_count": 1, "cosine_similarity": [0.52895]}
+{"word_start": "god", "word_end": "spirit", "simlex_score": 7.3, "word_path": ["god", "heaven", "angel", "spirit"], "expansion_count": 29, "cosine_similarity": [0.4665, 0.420998, 0.489471]}
+{"word_start": "arrive", "word_end": "come", "simlex_score": 7.05, "word_path": ["arrive", "come"], "expansion_count": 1, "cosine_similarity": [0.456792]}
+{"word_start": "begin", "word_end": "go", "simlex_score": 7.42, "word_path": ["begin", "take", "go"], "expansion_count": 2, "cosine_similarity": [0.386114, 0.479899]}
+{"word_start": "wine", "word_end": "liquor", "simlex_score": 7.85, "word_path": ["wine", "liquor"], "expansion_count": 1, "cosine_similarity": [0.704849]}
+{"word_start": "big", "word_end": "broad", "simlex_score": 6.73, "word_path": ["big", "wide", "broad"], "expansion_count": 2, "cosine_similarity": [0.565442, 0.601413]}
+{"word_start": "join", "word_end": "add", "simlex_score": 8.1, "word_path": ["join", "invite", "bring", "add"], "expansion_count": 23, "cosine_similarity": [0.460991, 0.227961, 0.15805]}
+{"word_start": "apparent", "word_end": "obvious", "simlex_score": 8.47, "word_path": ["apparent", "obvious"], "expansion_count": 1, "cosine_similarity": [0.524566]}
+{"word_start": "crowd", "word_end": "bunch", "simlex_score": 7.42, "word_path": ["crowd", "folks", "guys", "bunch"], "expansion_count": 16, "cosine_similarity": [0.517982, 0.547981, 0.52848]}
+{"word_start": "make", "word_end": "construct", "simlex_score": 8.33, "word_path": ["make", "build", "construct"], "expansion_count": 2, "cosine_similarity": [0.598783, 0.504116]}
+{"word_start": "cow", "word_end": "cattle", "simlex_score": 9.52, "word_path": ["cow", "cattle"], "expansion_count": 1, "cosine_similarity": [0.790957]}
+{"word_start": "world", "word_end": "globe", "simlex_score": 6.67, "word_path": ["world", "globe"], "expansion_count": 1, "cosine_similarity": [0.506736]}
+{"word_start": "participate", "word_end": "join", "simlex_score": 7.7, "word_path": ["participate", "join"], "expansion_count": 1, "cosine_similarity": [0.617377]}
+{"word_start": "crime", "word_end": "theft", "simlex_score": 7.53, "word_path": ["crime", "theft"], "expansion_count": 1, "cosine_similarity": [0.712844]}
+{"word_start": "river", "word_end": "stream", "simlex_score": 7.3, "word_path": ["river", "streams", "stream"], "expansion_count": 2, "cosine_similarity": [0.513911, 0.902449]}
+{"word_start": "assignment", "word_end": "task", "simlex_score": 8.7, "word_path": ["assignment", "task"], "expansion_count": 1, "cosine_similarity": [0.535173]}
+{"word_start": "strange", "word_end": "odd", "simlex_score": 9.02, "word_path": ["strange", "odd"], "expansion_count": 1, "cosine_similarity": [0.824457]}
+{"word_start": "pact", "word_end": "agreement", "simlex_score": 9.02, "word_path": ["pact", "agreement"], "expansion_count": 1, "cosine_similarity": [0.523629]}
+{"word_start": "music", "word_end": "melody", "simlex_score": 6.98, "word_path": ["music", "melody"], "expansion_count": 1, "cosine_similarity": [0.677356]}
+{"word_start": "adult", "word_end": "guardian", "simlex_score": 6.9, "word_path": ["adult", "infant", "parental", "guardians", "guardian"], "expansion_count": 23, "cosine_similarity": [0.371091, 0.453182, 0.372272, 0.810945]}
+{"word_start": "formal", "word_end": "proper", "simlex_score": 8.02, "word_path": ["formal", "precise", "proper"], "expansion_count": 2, "cosine_similarity": [0.417336, 0.489165]}
+{"word_start": "attach", "word_end": "join", "simlex_score": 7.75, "word_path": ["attach", "insert", "enter", "join"], "expansion_count": 24, "cosine_similarity": [0.50982, 0.590973, 0.495931]}
