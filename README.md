@@ -1,5 +1,5 @@
 # Senseflow
-[![View on GitHub](https://img.shields.io/badge/View%20on%20GitHub-343432?logo=github&logoColor=white&style=for-the-badge)](https://github.com/oakto/senseflow)
+[![View on GitHub](https://img.shields.io/badge/View%20on%20GitHub-343432?logo=github&logoColor=white&style=for-the-badge)](https://github.com/hcmok/senseflow)
 [![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-md-dark.svg)](https://huggingface.co/spaces/oako/senseflow)
 
 $$\text{sense} \rightarrow\ \text{vibe} \rightarrow\ \text{rhythm} \rightarrow\ \text{flow} $$
@@ -25,7 +25,7 @@ See the [report](./REPORT.md) for more details.
 1. Clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/oakto/senseflow
+git clone https://github.com/hcmok/senseflow
 cd senseflow
 ```
 

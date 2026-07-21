@@ -291,7 +291,7 @@ with gr.Blocks() as demo:
                      <h1 style="margin:0;margin-bottom: 1em;">🌀 SenseFlow</h1>
        <div style="display: flex; align-items: center; gap: 1em;">
         <h3 style="margin:0;font-weight:600 !important;">Semantic word morphing by flow-guided A*</h3>
-        <a href="https://github.com/oakto/senseflow" target="_blank" style="display: flex;">
+        <a href="https://github.com/hcmok/senseflow" target="_blank" style="display: flex;">
             <img src="https://img.shields.io/badge/View%20on%20GitHub-343432?logo=github&logoColor=white&style=for-the-badge" alt="View on GitHub">
         </a>
     </div>
